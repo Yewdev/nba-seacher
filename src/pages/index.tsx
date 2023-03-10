@@ -19,8 +19,7 @@ const Home: NextPage = () => {
         `https://free-nba.p.rapidapi.com/players?page=0&per_page=5&search=${query.trim()}`,
         {
           headers: {
-            "x-rapidapi-key":
-              "48b2d94655mshc2b2fc24eb62e29p13cc67jsnca0ac483e7ef",
+            "x-rapidapi-key": process.env.API_KEY || "",
             "x-rapidapi-host": "free-nba.p.rapidapi.com",
           },
         }
